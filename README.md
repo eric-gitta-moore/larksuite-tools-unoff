@@ -112,20 +112,42 @@ npx skills add https://github.com/eric-gitta-moore/larksuite-tools-unoff -l
 
 ## 同步上游
 
-为了避免仓库内再次出现会被识别到的嵌套 `SKILL.md`，这个仓库不直接保存原始子 skill 快照；同步时从外部原始 `skills/` 目录生成当前发布包。
+为了避免仓库内再次出现会被识别到的嵌套 `SKILL.md`，这个仓库不直接保存原始子 skill 快照；同步时默认直接从上游 `larksuite/cli` 仓库拉取并生成当前发布包。
 
 ```bash
-node scripts/build-aggregate-skill.mjs --source /path/to/larksuite/cli/skills --output ./skills
-node scripts/verify-skill-package.mjs --dir ./skills
+npm run sync:skills
+```
+
+如果你想指定上游分支或 tag：
+
+```bash
+npm run sync:skills -- --ref main
+```
+
+只有在本地已经有一份原始 `skills/` 目录、并且想强制用本地目录覆盖时，才需要传 `--source`：
+
+```bash
+npm run sync:skills -- --source /path/to/larksuite/cli/skills
 ```
 
 这套脚本会自动完成：
 
+- 从 `https://github.com/larksuite/cli.git` 拉取上游仓库
 - 只保留根目录一个可安装的 `skills/SKILL.md`
 - 把镜像子 skill 的入口从 `SKILL.md` 改成 `GUIDE.md`
 - 重写子 skill 之间的相对链接
 - 修复少量上游文档里的已知坏链
 - 校验最终发布包仍然只有一个 skill 入口
+
+如果你想在 GitHub 上手动同步上游，可以直接运行 workflow：
+
+- [sync-upstream.yml](/Users/bytedance/workspace/larksuite-tools/.github/workflows/sync-upstream.yml)
+
+这个 workflow 会：
+
+- 手动触发后从 `larksuite/cli` 拉取指定 ref
+- 运行 `npm run sync:skills`
+- 在有变更时自动提交并推回当前分支
 
 ## 依赖
 

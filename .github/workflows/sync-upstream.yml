@@ -1,0 +1,56 @@
+name: Sync Upstream Skills
+
+on:
+  workflow_dispatch:
+    inputs:
+      upstream_ref:
+        description: "Upstream ref to sync from"
+        required: false
+        default: "main"
+        type: string
+      commit_changes:
+        description: "Commit and push synced changes back to the current branch"
+        required: false
+        default: true
+        type: boolean
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Sync aggregate package from upstream
+        run: |
+          npm run sync:skills -- --ref "${{ inputs.upstream_ref }}" --output "$GITHUB_WORKSPACE/skills"
+
+      - name: Show changed files
+        run: git status --short
+
+      - name: Commit and push changes
+        if: ${{ inputs.commit_changes }}
+        env:
+          UPSTREAM_REF: ${{ inputs.upstream_ref }}
+        run: |
+          if git diff --quiet && git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md package.json scripts .github/workflows skills
+          git commit -m "chore: sync upstream skills (${UPSTREAM_REF})"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

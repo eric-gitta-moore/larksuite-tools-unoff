@@ -1,0 +1,21 @@
+{
+  "name": "larksuite-tools",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A publishable aggregate skill package for LarkSuite CLI.",
+  "scripts": {
+    "build:skills": "node scripts/build-aggregate-skill.mjs --output ./skills",
+    "verify:skills": "node scripts/verify-skill-package.mjs --dir ./skills",
+    "sync:skills": "node scripts/sync-upstream-skills.mjs --output ./skills"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eric-gitta-moore/larksuite-tools-unoff.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eric-gitta-moore/larksuite-tools-unoff/issues"
+  },
+  "homepage": "https://github.com/eric-gitta-moore/larksuite-tools-unoff#readme"
+}
