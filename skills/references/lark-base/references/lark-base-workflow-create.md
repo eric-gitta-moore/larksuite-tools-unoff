@@ -1,6 +1,6 @@
 # base +workflow-create
 
-> **前置条件：** 先阅读 [`../lark-shared/SKILL.md`](../../lark-shared/SKILL.md) 了解认证、全局参数和安全规则。
+> **前置条件：** 先阅读 [`../lark-shared/SKILL.md`](../../lark-shared/GUIDE.md) 了解认证、全局参数和安全规则。
 
 在 Base 中创建一个新的自动化工作流。新建后状态为 `disabled`，需调用 `+workflow-enable` 才能启用。
 
@@ -147,7 +147,7 @@ POST /open-apis/base/v3/bases/:base_token/workflows
 - ⚠️ **新建后默认禁用**：`status` 固定返回 `disabled`，需要额外调用 `+workflow-enable` 才能让工作流生效；不要误报"创建成功即启用"
 - ⚠️ **steps 中 id 字段必须唯一**：每个步骤的 `id` 由调用方指定，且在工作流内必须唯一；`next` 和 `children.links[].to` 引用的 ID 必须在同一 steps 数组中存在，否则服务端返回 `[2200] Internal Error`
 - ⚠️ **@file 路径限制**：`--json @workflow.json` 会读取文件内容，复杂 workflow 强烈建议用文件而不是命令行内联。CLI 强制要求相对路径（如 `@./workflow.json`），绝对路径（包括 `/tmp/xxx` 和 `/Users/.../xxx`）会被拒绝
-- ⚠️ **权限不足**：如遇 `permission denied`，先确认当前身份（bot 或 user）是否对该 Base 有编辑权限，再检查 scope 是否已开通。参考 [lark-shared](../../lark-shared/SKILL.md) 中的权限不足处理流程
+- ⚠️ **权限不足**：如遇 `permission denied`，先确认当前身份（bot 或 user）是否对该 Base 有编辑权限，再检查 scope 是否已开通。参考 [lark-shared](../../lark-shared/GUIDE.md) 中的权限不足处理流程
 - ⚠️ **user_id_type**：涉及用户的 `value_type: "user"` 的 value 字段传 OpenID，服务端会根据 `user_id_type`（默认 `open_id`）解析；如需传 `user_id` 格式需在 body 里显式声明 `"user_id_type": "user_id"`
 
 ## 参考
@@ -156,5 +156,5 @@ POST /open-apis/base/v3/bases/:base_token/workflows
 - [lark-base-workflow-update](lark-base-workflow-update.md) — 全量更新工作流
 - [lark-base-workflow-enable](lark-base-workflow-enable.md) — 启用工作流
 - [lark-base-workflow-list](lark-base-workflow-list.md) — 列出全部工作流
-- [lark-base](../SKILL.md) — 多维表格全部命令
-- [lark-shared](../../lark-shared/SKILL.md) — 认证和全局参数
+- [lark-base](../GUIDE.md) — 多维表格全部命令
+- [lark-shared](../../lark-shared/GUIDE.md) — 认证和全局参数

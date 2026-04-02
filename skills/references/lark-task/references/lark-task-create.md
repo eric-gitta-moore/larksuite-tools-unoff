@@ -47,5 +47,5 @@ lark-cli task +create --summary "Test Task" --dry-run
 
 ## References
 
-- [lark-task](../SKILL.md) -- All task commands
-- [lark-shared](../../lark-shared/SKILL.md) -- Authentication and global parameters
+- [lark-task](../GUIDE.md) -- All task commands
+- [lark-shared](../../lark-shared/GUIDE.md) -- Authentication and global parameters

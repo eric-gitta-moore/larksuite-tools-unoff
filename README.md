@@ -69,7 +69,7 @@ npx skills add https://github.com/eric-gitta-moore/larksuite-tools-unoff -l
 
 所以出现这些问题时，优先读：
 
-- [`skills/references/lark-shared/SKILL.md`](./skills/references/lark-shared/SKILL.md)
+- [`skills/references/lark-shared/GUIDE.md`](./skills/references/lark-shared/GUIDE.md)
 
 典型信号包括：
 
@@ -83,14 +83,14 @@ npx skills add https://github.com/eric-gitta-moore/larksuite-tools-unoff -l
 
 常见路由示例：
 
-- 日历 / 日程 / 忙闲 / RSVP：[`lark-calendar`](./skills/references/lark-calendar/SKILL.md)
-- 文档 / Markdown 创建 / 文档更新：[`lark-doc`](./skills/references/lark-doc/SKILL.md)
-- 云盘 / 上传下载 / 文件夹 / 权限：[`lark-drive`](./skills/references/lark-drive/SKILL.md)
-- 消息 / 群聊 / 线程 / 文件消息：[`lark-im`](./skills/references/lark-im/SKILL.md)
-- 邮件 / 草稿 / 发送 / 回复：[`lark-mail`](./skills/references/lark-mail/SKILL.md)
-- 待办 / 任务 / 清单：[`lark-task`](./skills/references/lark-task/SKILL.md)
-- 历史会议 / 纪要 / 逐字稿：[`lark-vc`](./skills/references/lark-vc/SKILL.md)
-- 多维表格 / 字段 / 记录 / 分析：[`lark-base`](./skills/references/lark-base/SKILL.md)
+- 日历 / 日程 / 忙闲 / RSVP：[`lark-calendar`](./skills/references/lark-calendar/GUIDE.md)
+- 文档 / Markdown 创建 / 文档更新：[`lark-doc`](./skills/references/lark-doc/GUIDE.md)
+- 云盘 / 上传下载 / 文件夹 / 权限：[`lark-drive`](./skills/references/lark-drive/GUIDE.md)
+- 消息 / 群聊 / 线程 / 文件消息：[`lark-im`](./skills/references/lark-im/GUIDE.md)
+- 邮件 / 草稿 / 发送 / 回复：[`lark-mail`](./skills/references/lark-mail/GUIDE.md)
+- 待办 / 任务 / 清单：[`lark-task`](./skills/references/lark-task/GUIDE.md)
+- 历史会议 / 纪要 / 逐字稿：[`lark-vc`](./skills/references/lark-vc/GUIDE.md)
+- 多维表格 / 字段 / 记录 / 分析：[`lark-base`](./skills/references/lark-base/GUIDE.md)
 
 ### 4. 能力不够再走 OpenAPI
 
@@ -102,13 +102,30 @@ npx skills add https://github.com/eric-gitta-moore/larksuite-tools-unoff -l
 
 再读取：
 
-- [`skills/references/lark-openapi-explorer/SKILL.md`](./skills/references/lark-openapi-explorer/SKILL.md)
+- [`skills/references/lark-openapi-explorer/GUIDE.md`](./skills/references/lark-openapi-explorer/GUIDE.md)
 
 ### 5. 需要继续扩展 skill 时
 
 如果要在这套体系里继续新增或改造自定义飞书 skill，参考：
 
-- [`skills/references/lark-skill-maker/SKILL.md`](./skills/references/lark-skill-maker/SKILL.md)
+- [`skills/references/lark-skill-maker/GUIDE.md`](./skills/references/lark-skill-maker/GUIDE.md)
+
+## 同步上游
+
+为了避免仓库内再次出现会被识别到的嵌套 `SKILL.md`，这个仓库不直接保存原始子 skill 快照；同步时从外部原始 `skills/` 目录生成当前发布包。
+
+```bash
+node scripts/build-aggregate-skill.mjs --source /path/to/larksuite/cli/skills --output ./skills
+node scripts/verify-skill-package.mjs --dir ./skills
+```
+
+这套脚本会自动完成：
+
+- 只保留根目录一个可安装的 `skills/SKILL.md`
+- 把镜像子 skill 的入口从 `SKILL.md` 改成 `GUIDE.md`
+- 重写子 skill 之间的相对链接
+- 修复少量上游文档里的已知坏链
+- 校验最终发布包仍然只有一个 skill 入口
 
 ## 依赖
 

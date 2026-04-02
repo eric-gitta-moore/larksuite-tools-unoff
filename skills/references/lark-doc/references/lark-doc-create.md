@@ -1,7 +1,7 @@
 
 # docs +create（创建飞书云文档）
 
-> **前置条件：** 先阅读 [`../lark-shared/SKILL.md`](../../lark-shared/SKILL.md) 了解认证、全局参数和安全规则。
+> **前置条件：** 先阅读 [`../lark-shared/SKILL.md`](../../lark-shared/GUIDE.md) 了解认证、全局参数和安全规则。
 
 从 Lark-flavored Markdown 内容创建一个新的飞书云文档。
 
@@ -435,7 +435,7 @@ lark-cli docs +create --title "空白画板示例" --markdown '<whiteboard type=
 **重要说明**：
 - 创建空白画板时，直接使用 `<whiteboard type="blank"></whiteboard>`
 - 读取时只能获取 token，可通过 media-download 查看内容，无法直接读出画板内部内容
-- 画板编辑：详见 [SKILL.md](../SKILL.md#重要说明画板编辑)
+- 画板编辑：详见 [SKILL.md](../GUIDE.md#重要说明画板编辑)
 
 ### 多维表格（Base）
 
@@ -654,4 +654,4 @@ $$
 - [lark-doc-fetch](lark-doc-fetch.md) — 获取文档
 - [lark-doc-update](lark-doc-update.md) — 更新文档
 - [lark-doc-media-insert](lark-doc-media-insert.md) — 插入图片/文件到文档
-- [lark-shared](../../lark-shared/SKILL.md) — 认证和全局参数
+- [lark-shared](../../lark-shared/GUIDE.md) — 认证和全局参数

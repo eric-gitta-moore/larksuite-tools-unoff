@@ -1,7 +1,7 @@
 
 # docs +update（更新飞书云文档）
 
-> **前置条件：** 先阅读 [`../lark-shared/SKILL.md`](../../lark-shared/SKILL.md) 了解认证、全局参数和安全规则。
+> **前置条件：** 先阅读 [`../lark-shared/SKILL.md`](../../lark-shared/GUIDE.md) 了解认证、全局参数和安全规则。
 
 更新飞书云文档内容，支持 7 种更新模式。优先使用局部更新（replace_range/append/insert_before/insert_after），慎用 overwrite（会清空文档重写，可能丢失图片、评论等）。
 
@@ -209,7 +209,7 @@ lark-cli docs +update --doc "文档ID" --mode insert_after --selection-with-elli
 
 > **⚠️ docs +update 不能编辑已有画板内容，但可以创建新的空白画板**
 
-画板编辑：详见 [SKILL.md](../SKILL.md#重要说明画板编辑)
+画板编辑：详见 [SKILL.md](../GUIDE.md#重要说明画板编辑)
 
 ## 小粒度精确替换
 
@@ -258,4 +258,4 @@ lark-cli docs +update --doc "文档ID" --mode insert_after --selection-with-elli
 - [lark-doc-fetch](lark-doc-fetch.md) — 获取文档
 - [lark-doc-create](lark-doc-create.md) — 创建文档（含完整 Markdown 格式参考）
 - [lark-doc-media-insert](lark-doc-media-insert.md) — 插入图片/文件到文档
-- [lark-shared](../../lark-shared/SKILL.md) — 认证和全局参数
+- [lark-shared](../../lark-shared/GUIDE.md) — 认证和全局参数

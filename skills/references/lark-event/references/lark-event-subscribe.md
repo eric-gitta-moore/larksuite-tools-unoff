@@ -1,7 +1,7 @@
 
 # event +subscribe
 
-> **Prerequisite:** Read [`../lark-shared/SKILL.md`](../../lark-shared/SKILL.md) first to understand authentication, global parameters, and safety rules.
+> **Prerequisite:** Read [`../lark-shared/SKILL.md`](../../lark-shared/GUIDE.md) first to understand authentication, global parameters, and safety rules.
 
 Subscribe to Lark events via WebSocket long connection, outputting NDJSON to stdout. Supports compact (agent-friendly) format, regex-based routing, and file output.
 
@@ -210,6 +210,6 @@ lark-cli event +subscribe \
 
 ## References
 
-- [lark-im](../../lark-im/SKILL.md) — Messaging commands
+- [lark-im](../../lark-im/GUIDE.md) — Messaging commands
 - [lark-doc-update](../../lark-doc/references/lark-doc-update.md) — Update Lark documents
-- [lark-shared](../../lark-shared/SKILL.md) — Authentication and global parameters
+- [lark-shared](../../lark-shared/GUIDE.md) — Authentication and global parameters

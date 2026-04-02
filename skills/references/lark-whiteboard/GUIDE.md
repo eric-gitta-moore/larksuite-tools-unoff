@@ -130,7 +130,7 @@ npx -y @larksuite/whiteboard-cli@^0.1.0 -i skeleton.json -o ./images/step1.png -
 
 **上传飞书画板**：
 
-> 上传需要飞书认证。遇到认证或权限错误时，阅读 [`../lark-shared/SKILL.md`](../lark-shared/SKILL.md) 了解登录和权限处理。
+> 上传需要飞书认证。遇到认证或权限错误时，阅读 [`../lark-shared/SKILL.md`](../lark-shared/GUIDE.md) 了解登录和权限处理。
 
 **第一步：获取画板 Token**
 
@@ -140,7 +140,7 @@ npx -y @larksuite/whiteboard-cli@^0.1.0 -i skeleton.json -o ./images/step1.png -
 | 文档 URL 或 doc_id，文档中已有画板 | `lark-cli docs +fetch --doc <URL> --as user`，从返回的 `<whiteboard token=”XXX”/>` 中提取 token |
 | 文档 URL 或 doc_id，需要新建画板 | `lark-cli docs +update --doc <doc_id> --mode append --markdown '<whiteboard type=”blank”></whiteboard>' --as user`，从响应的 `data.board_tokens[0]` 获取 token |
 
-关于飞书文档的创建，读取等更多操作，请参考 lark-doc skill [`../lark-doc/SKILL.md`](../lark-doc/SKILL.md)。
+关于飞书文档的创建，读取等更多操作，请参考 lark-doc skill [`../lark-doc/SKILL.md`](../lark-doc/GUIDE.md)。
 
 **第二步：上传**
 

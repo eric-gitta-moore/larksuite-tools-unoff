@@ -10,7 +10,7 @@ metadata:
 
 # base
 
-> **前置条件：** 先阅读 [`../lark-shared/SKILL.md`](../lark-shared/SKILL.md)。
+> **前置条件：** 先阅读 [`../lark-shared/SKILL.md`](../lark-shared/GUIDE.md)。
 > **执行前必做：** 执行任何 `base` 命令前，必须先阅读对应命令的 reference 文档，再调用命令。
 > **命名约定：** 仅使用 `lark-cli base +...` 形式的命令。
 

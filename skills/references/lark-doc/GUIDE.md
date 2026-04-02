@@ -10,7 +10,7 @@ metadata:
 
 # docs (v1)
 
-**CRITICAL — 开始前 MUST 先用 Read 工具读取 [`../lark-shared/SKILL.md`](../lark-shared/SKILL.md)，其中包含认证、权限处理**
+**CRITICAL — 开始前 MUST 先用 Read 工具读取 [`../lark-shared/SKILL.md`](../lark-shared/GUIDE.md)，其中包含认证、权限处理**
 
 ## 核心概念
 
@@ -102,7 +102,7 @@ Drive Folder (云空间文件夹)
 ### 场景 1：已通过 docs +fetch 获取到文档内容和画板 token
 如果用户已经通过 `docs +fetch` 拉取了文档内容，并且文档中已有画板（返回的 markdown 中包含 `<whiteboard token="xxx"/>` 标签），请引导用户：
 1. 记录画板的 token
-2. 查看 [`../lark-whiteboard/SKILL.md`](../lark-whiteboard/SKILL.md) 了解如何编辑画板内容
+2. 查看 [`../lark-whiteboard/SKILL.md`](../lark-whiteboard/GUIDE.md) 了解如何编辑画板内容
 ### 场景 2：刚创建画板，需要编辑
 如果用户刚通过 `docs +update` 创建了空白画板，需要编辑时：
 **步骤 1：按空白画板语法创建**
@@ -113,10 +113,10 @@ Drive Folder (云空间文件夹)
 - `data.board_tokens` 是新建画板的 token 列表，后续编辑直接使用这里的 token
   **步骤 3：引导编辑**
 - 记录需要编辑的画板 token
-- 查看 [`../lark-whiteboard/SKILL.md`](../lark-whiteboard/SKILL.md) 了解如何编辑画板内容
+- 查看 [`../lark-whiteboard/SKILL.md`](../lark-whiteboard/GUIDE.md) 了解如何编辑画板内容
 ### 注意事项
 - 已有画板内容无法通过 lark-doc 的 `docs +update` 直接编辑
-- 编辑画板需要使用专门的 [`../lark-whiteboard/SKILL.md`](../lark-whiteboard/SKILL.md)
+- 编辑画板需要使用专门的 [`../lark-whiteboard/SKILL.md`](../lark-whiteboard/GUIDE.md)
 
 ## 快速决策
 - 用户说“找一个表格”“按名称搜电子表格”“找报表”“最近打开的表格”，先用 `lark-cli docs +search` 做资源发现。

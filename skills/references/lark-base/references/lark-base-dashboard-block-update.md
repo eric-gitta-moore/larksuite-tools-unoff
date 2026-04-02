@@ -1,6 +1,6 @@
 # base +dashboard-block-update
 
-> **前置条件：** 先阅读 [`../lark-shared/SKILL.md`](../../lark-shared/SKILL.md) 了解认证、全局参数和安全规则。
+> **前置条件：** 先阅读 [`../lark-shared/SKILL.md`](../../lark-shared/GUIDE.md) 了解认证、全局参数和安全规则。
 > **data_config 结构：** 参见 [dashboard-block-data-config.md](dashboard-block-data-config.md) 了解图表类型、通用字段和 filter 规则。
 
 更新仪表盘中 Block 的名称或数据配置。

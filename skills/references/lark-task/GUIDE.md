@@ -10,7 +10,7 @@ metadata:
 
 # task (v2)
 
-**CRITICAL — 开始前 MUST 先用 Read 工具读取 [`../lark-shared/SKILL.md`](../lark-shared/SKILL.md)，其中包含认证、权限处理**
+**CRITICAL — 开始前 MUST 先用 Read 工具读取 [`../lark-shared/SKILL.md`](../lark-shared/GUIDE.md)，其中包含认证、权限处理**
 
 > **搜索技巧**：如果用户的查询只指定了任务名称（例如“完成任务龙虾一号”），请直接使用 `+get-my-tasks --query "龙虾一号"` 命令搜索（不要带 `--complete` 参数，这样可以同时搜索未完成和已完成的任务）。
 > **用户身份识别**：在用户身份（user identity）场景下，如果用户提到了“我”（例如“分配给我”、“由我创建”），请默认获取当前登录用户的 `open_id` 作为对应的参数值。

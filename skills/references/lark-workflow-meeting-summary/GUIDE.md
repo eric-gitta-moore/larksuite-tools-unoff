@@ -9,7 +9,7 @@ metadata:
 
 # 会议纪要汇总工作流
 
-**CRITICAL — 开始前 MUST 先用 Read 工具读取 [`../lark-shared/SKILL.md`](../lark-shared/SKILL.md)，其中包含认证、权限处理**。然后阅读 [`../lark-vc/SKILL.md`](../lark-vc/SKILL.md)，了解会议纪要相关操作。
+**CRITICAL — 开始前 MUST 先用 Read 工具读取 [`../lark-shared/SKILL.md`](../lark-shared/GUIDE.md)，其中包含认证、权限处理**。然后阅读 [`../lark-vc/SKILL.md`](../lark-vc/GUIDE.md)，了解会议纪要相关操作。
 
 ## 适用场景
 
@@ -89,7 +89,7 @@ lark-cli drive metas batch_query --data '{"request_docs": [{"doc_type": "docx", 
 
 ### Step 5: 生成文档（可选，用户要求时）
 
-阅读 [`../lark-doc/SKILL.md`](../lark-doc/SKILL.md) 学习云文档技能。
+阅读 [`../lark-doc/SKILL.md`](../lark-doc/GUIDE.md) 学习云文档技能。
 
 ```bash
 lark-cli docs +create --title "会议纪要汇总 (<start> - <end>)" --markdown "<内容>"
@@ -99,6 +99,6 @@ lark-cli docs +update --doc "<url_or_token>" --mode append --markdown "<内容>"
 
 ## 参考
 
-- [lark-shared](../lark-shared/SKILL.md) — 认证、权限（必读）
-- [lark-vc](../lark-vc/SKILL.md) — `+search`、`+notes` 详细用法
-- [lark-doc](../lark-doc/SKILL.md) — `+fetch`、`+create`、`+update` 详细用法
+- [lark-shared](../lark-shared/GUIDE.md) — 认证、权限（必读）
+- [lark-vc](../lark-vc/GUIDE.md) — `+search`、`+notes` 详细用法
+- [lark-doc](../lark-doc/GUIDE.md) — `+fetch`、`+create`、`+update` 详细用法

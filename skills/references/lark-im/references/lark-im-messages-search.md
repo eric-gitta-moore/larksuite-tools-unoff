@@ -1,6 +1,6 @@
 # im +messages-search
 
-> **Prerequisite:** Read [`../lark-shared/SKILL.md`](../../lark-shared/SKILL.md) first to understand authentication, global parameters, and safety rules.
+> **Prerequisite:** Read [`../lark-shared/SKILL.md`](../../lark-shared/GUIDE.md) first to understand authentication, global parameters, and safety rules.
 
 Search Feishu messages across conversations. This shortcut automatically performs a multi-step workflow: search for message IDs, batch fetch message details, then enrich the results with chat context.
 
@@ -208,6 +208,6 @@ lark-cli im +messages-search --query "" --chat-id oc_xxx --sender ou_me --start 
 
 ## References
 
-- [lark-im](../SKILL.md) - all message-related commands
+- [lark-im](../GUIDE.md) - all message-related commands
 - [lark-im-threads-messages-list](lark-im-threads-messages-list.md) - inspect thread replies
-- [lark-shared](../../lark-shared/SKILL.md) - authentication and global parameters
+- [lark-shared](../../lark-shared/GUIDE.md) - authentication and global parameters

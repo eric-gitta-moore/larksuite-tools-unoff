@@ -1,7 +1,7 @@
 
 # drive +add-comment
 
-> **前置条件：** 先阅读 [`../lark-shared/SKILL.md`](../../lark-shared/SKILL.md) 了解认证、全局参数和安全规则。
+> **前置条件：** 先阅读 [`../lark-shared/SKILL.md`](../../lark-shared/GUIDE.md) 了解认证、全局参数和安全规则。
 
 给文档添加评论。底层统一走 `/open-apis/drive/v1/files/:file_token/new_comments`（`create_v2`）接口；未指定位置时省略 `anchor` 创建全文评论，指定 `--selection-with-ellipsis` 或 `--block-id` 时传入 `anchor.block_id` 创建局部评论。支持直接传 docx URL/token、旧版 doc URL（仅全文评论），也支持传最终可解析为 doc/docx 的 wiki URL。
 
@@ -95,5 +95,5 @@ lark-cli drive +add-comment \
 
 ## 参考
 
-- [lark-drive](../SKILL.md) -- 云空间全部命令
-- [lark-shared](../../lark-shared/SKILL.md) -- 认证和全局参数
+- [lark-drive](../GUIDE.md) -- 云空间全部命令
+- [lark-shared](../../lark-shared/GUIDE.md) -- 认证和全局参数

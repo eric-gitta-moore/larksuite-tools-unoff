@@ -1,6 +1,6 @@
 # base +workflow-get
 
-> **前置条件：** 先阅读 [`../lark-shared/SKILL.md`](../../lark-shared/SKILL.md) 了解认证、全局参数和安全规则。
+> **前置条件：** 先阅读 [`../lark-shared/SKILL.md`](../../lark-shared/GUIDE.md) 了解认证、全局参数和安全规则。
 > **必读参考：** 获取到的 `steps` 列表的具体节点结构和各触发器/动作组件的完整配置项，请参见 [`lark-base-workflow-schema.md`](lark-base-workflow-schema.md)。
 
 获取一个 workflow 的完整定义，包括标题、状态、所有步骤（steps）及其配置。
@@ -142,7 +142,7 @@ GET /open-apis/base/v3/bases/:base_token/workflows/:workflow_id
 
 ## 参考
 
-- [lark-base](../SKILL.md) — 多维表格全部命令
+- [lark-base](../GUIDE.md) — 多维表格全部命令
 - [lark-base-workflow-schema.md](lark-base-workflow-schema.md) — Workflow 步骤数据结构完整参考
 - [lark-base-workflow-list.md](lark-base-workflow-list.md) — 列出所有 workflow（可用来获取 workflow_id）
 - [lark-base-workflow-create.md](lark-base-workflow-create.md) — 创建 workflow

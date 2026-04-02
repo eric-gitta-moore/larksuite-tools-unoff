@@ -1,6 +1,6 @@
 # calendar +suggestion
 
-> **前置条件：** 先阅读 [`../lark-shared/SKILL.md`](../../lark-shared/SKILL.md)。
+> **前置条件：** 先阅读 [`../lark-shared/SKILL.md`](../../lark-shared/GUIDE.md)。
 
 针对时间未确定的预约日程需求，提供多个时间推荐方案，用户可以根据需要选择方案，解决协调会议时间的难题。
 
@@ -122,5 +122,5 @@ lark-cli calendar +suggestion \
 
 - [lark-calendar-create](lark-calendar-create.md) — 创建日程
 - [lark-calendar-freebusy](lark-calendar-freebusy.md) — 查询忙闲时段和rsvp状态
-- [lark-calendar](../SKILL.md) — 日历完整 API
+- [lark-calendar](../GUIDE.md) — 日历完整 API
 

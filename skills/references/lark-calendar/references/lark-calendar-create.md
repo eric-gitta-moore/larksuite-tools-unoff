@@ -1,7 +1,7 @@
 
 # calendar +create
 
-> **前置条件：** 先阅读 [`../lark-shared/SKILL.md`](../../lark-shared/SKILL.md) 了解认证、全局参数和安全规则。
+> **前置条件：** 先阅读 [`../lark-shared/SKILL.md`](../../lark-shared/GUIDE.md) 了解认证、全局参数和安全规则。
 
 创建日程并按需邀请参会人。
 
@@ -102,6 +102,6 @@ lark-cli calendar events delete \
 
 ## 参考
 
-- [lark-calendar](../SKILL.md) -- 日历全部命令
-- [lark-shared](../../lark-shared/SKILL.md) -- 认证和全局参数
+- [lark-calendar](../GUIDE.md) -- 日历全部命令
+- [lark-shared](../../lark-shared/GUIDE.md) -- 认证和全局参数
 - [lark-calendar-suggestion](lark-calendar-suggestion.md) -- 智能推荐空闲时段

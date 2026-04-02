@@ -1,7 +1,7 @@
 
 # docs +fetch（获取飞书云文档）
 
-> **前置条件：** 先阅读 [`../lark-shared/SKILL.md`](../../lark-shared/SKILL.md) 了解认证、全局参数和安全规则。
+> **前置条件：** 先阅读 [`../lark-shared/SKILL.md`](../../lark-shared/GUIDE.md) 了解认证、全局参数和安全规则。
 
 ## 命令
 
@@ -55,7 +55,7 @@ lark-cli docs +fetch --doc Z1FjxxxxxxxxxxxxxxxxxxxtnAc --format pretty
   ```html
   <whiteboard token="Z1FjxxxxxxxxxxxxxxxxxxxtnAc"/>
   ```
-- 画板编辑：详见 [SKILL.md](../SKILL.md#重要说明画板编辑)
+- 画板编辑：详见 [SKILL.md](../GUIDE.md#重要说明画板编辑)
 
 ### 获取步骤
 
@@ -96,4 +96,4 @@ lark-cli docs +fetch --doc Z1FjxxxxxxxxxxxxxxxxxxxtnAc --format pretty
 - [lark-doc-create](lark-doc-create.md) — 创建文档
 - [lark-doc-update](lark-doc-update.md) — 更新文档
 - [lark-doc-media-download](lark-doc-media-download.md) — 下载素材/画板缩略图
-- [lark-shared](../../lark-shared/SKILL.md) — 认证和全局参数
+- [lark-shared](../../lark-shared/GUIDE.md) — 认证和全局参数
