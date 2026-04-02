@@ -8,6 +8,20 @@
 - 需要先从一个总入口判断是认证问题、领域问题，还是需要走 OpenAPI 探索
 - 希望把飞书相关能力作为一套独立 skills 单独维护，而不是继续散落在多个目录里
 
+## 安装
+
+安装 skills：
+
+```bash
+npx skills add https://github.com/eric-gitta-moore/larksuite-tools-unoff
+```
+
+查看仓库里的 skills：
+
+```bash
+npx skills add https://github.com/eric-gitta-moore/larksuite-tools-unoff -l
+```
+
 ## 仓库目标
 
 - 提供一个统一的总入口 skill：[`skills/SKILL.md`](./skills/SKILL.md)
@@ -129,4 +143,3 @@ lark-cli task --help
 - 希望把飞书能力单独沉淀成一套 skills 的 Agent 使用者
 - 需要在 Codex / 其他支持 Skill 的 Agent 环境中统一接入 `lark-cli`
 - 想先用一个总 skill 分流，再按需加载具体领域知识的人
-
